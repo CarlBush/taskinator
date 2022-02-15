@@ -11,6 +11,15 @@ var taskDataOjb = {
     name: taskNameInput,
     type: taskTypeInput
 };
+
+//check if input is empty
+if(!taskNameInput || !taskTypeInput) {
+    alert("You need to fill the form out yo!");
+    return false;
+}
+
+formEl.reset();
+
 // send it as an argument to createTaskEl
 createTaskEl(taskDataOjb);
 
